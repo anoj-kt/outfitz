@@ -28,7 +28,7 @@ const App = () => {
     <div className="categories__container">
       {categories.map(({title}) => (
         <div className="category__container">
-        {/* <img src="" alt="" /> */}
+          <div className="category__img" />
           <div className="category__body-container">
             <h2>{title}</h2>
             <p>Shop Now</p>
