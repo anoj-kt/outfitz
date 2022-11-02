@@ -1,3 +1,9 @@
+# Outfitz (Under Development)
+E-commerce website for clothing.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
