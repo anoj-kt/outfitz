@@ -26,8 +26,8 @@ const SignInForm = () => {
         event.preventDefault();
 
         try {
-            const response = await signInAuthUserWithEmailAndPassword(email, password)
-            setFormFields(defaultFormFields)
+            const { user } = await signInAuthUserWithEmailAndPassword(email, password);
+            setFormFields(defaultFormFields);
         } catch (error) {
             switch(error.code) {
                 case 'auth/wrong password': 
@@ -37,14 +37,13 @@ const SignInForm = () => {
                     alert('no user associated with this email')
                     break
                 default:
-                    console.log(error)
+                    console.log(error);
             }
         }
     }
 
     const signInWithGoogle = async () => {
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     }
 
     // =========JSX=========
