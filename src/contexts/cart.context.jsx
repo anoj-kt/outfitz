@@ -1,11 +1,11 @@
 import { createContext, useState, useEffect } from 'react';
 
 const addCartItem = (cartItems, productToAdd) => {
-    const existingCardItem = cartItems.find((cartItem) => cartItem.id == productToAdd.id);
+    const existingCardItem = cartItems.find((cartItem) => cartItem.id === productToAdd.id);
 
     if(existingCardItem) {
         return cartItems.map((cartItem) => 
-            cartItem.id == productToAdd.id
+            cartItem.id === productToAdd.id
                 ? { ...cartItem, quantity: cartItem.quantity + 1}
                 : cartItem
         )
@@ -15,14 +15,14 @@ const addCartItem = (cartItems, productToAdd) => {
 };
 
 const removeCartItem = (cartItems, cartItemToRemove) => {
-    const existingCardItem = cartItems.find((cartItem) => cartItem.id == cartItemToRemove.id);
+    const existingCardItem = cartItems.find((cartItem) => cartItem.id === cartItemToRemove.id);
 
     if(existingCardItem.quantity === 1) {
         return cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id)
     }
 
     return cartItems.map((cartItem) => 
-            cartItem.id == cartItemToRemove.id
+            cartItem.id === cartItemToRemove.id
                 ? { ...cartItem, quantity: cartItem.quantity - 1}
                 : cartItem
         )
