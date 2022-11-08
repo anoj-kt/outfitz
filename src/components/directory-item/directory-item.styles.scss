@@ -1,11 +1,4 @@
-.categories__container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .category__container {
+  .directory-item__container {
     min-width: 30%;
     height: 240px;
     flex: 1 1 auto;
@@ -19,12 +12,12 @@
     &:hover {
       cursor: pointer;
   
-      & .category__img {
+      & .background__img {
         transform: scale(1.1);
         transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
   
-      & .category__body-container {
+      & .body{
         opacity: 0.9;
       }
     }
@@ -41,14 +34,14 @@
       margin-left: 7.5px;
     }
   
-    .category__img {
+    .background__img {
       width: 100%;
       height: 100%;
       background-size: cover;
       background-position: center;
     }
   
-    .category__body-container {
+    .body {
       height: 90px;
       padding: 0 25px;
       display: flex;
