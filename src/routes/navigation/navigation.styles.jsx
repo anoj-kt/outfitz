@@ -17,7 +17,7 @@ export const LogoContainer = styled(Link)`
     height: 100%;
     width: fit-content;
   }
-`;
+`; 
 
 export const NavLinks = styled.div`
   width: 50%;
