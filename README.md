@@ -1,6 +1,14 @@
-# Outfitz (Under Development)
-E-commerce website for clothing.
+# Outfitz
+An E-commerce website for a clothing retailer.
 
+**You can see the live version [here](https://outfitz.netlify.app/)**
+<br>
+
+## Language/Framework used
+![React JS](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) 
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+![Firebase 9](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 
 
 
