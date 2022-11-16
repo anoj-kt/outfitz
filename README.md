@@ -13,7 +13,7 @@ I am currently working on improving the styling, mobile responsiveness and migra
 
 This application was first built using Context API and then migrated the state managment to Redux. However, for reference purposes, the older version using the Context API is under a different branch [here](https://github.com/anoj-kt/outfitz/tree/Application-with-useContext-(before-Redux)).
 
-**You can see the live version [here](https://outfitz.netlify.app/)**
+:rocket: **You can see the live version [here](https://outfitz.netlify.app/)**
 <br>
 
 ## Tech stack used
@@ -40,6 +40,7 @@ This application was first built using Context API and then migrated the state m
 - Redux-logger as development dependency - Logs the previous state, action and next state to console.
 - Redux-persist - Stores items in the cart to local storage.
 - Reselect - Used for memoization.
+<br>
 
 ---
 
