@@ -1,17 +1,49 @@
 # Outfitz
-An E-commerce website for a clothing retailer.
+**Contents**
+1. [Description](#description)
+2. [Tech stack used](#tech-stack-used)
+3. [Key project features](#key-project-features)
+4. [Currently working on](#currently-working-on)
+5. [Other dependencies/libraries used](#other-dependencieslibraries-used)
+6. [React ReadMe](#react-readme)
+
+## Description
+This is an E-commerce web application for a clothing retailer. You can view the tech stack used for this project [below](#tech-stack-used). <br/>
+I am currently working on improving the styling, mobile responsiveness and migrating the codebase to Typescript.
+
+This application was first built using Context API and then migrated the state managment to Redux. However, for reference purposes, the older version using the Context API is under a different branch [here](https://github.com/anoj-kt/outfitz/tree/Application-with-useContext-(before-Redux)).
 
 **You can see the live version [here](https://outfitz.netlify.app/)**
 <br>
 
-## Language/Framework used
+## Tech stack used
 ![React JS](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Firebase 9](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 
+**Deployed using:**<br>
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
+## Key project features
+- Any user could sign up with their email or with their Google account.
+- User can add to the cart and edit them. 
+- Cart items will be saved in local storage.
 
+## Currently working on
+- Styling for mobile responsiveness.
+- Migrating codebase to Typescript.
+- Setting up stripe payment (on test mode).
+
+## Other dependencies/libraries used
+- Redux-logger as development dependency - Logs the previous state, action and next state to console.
+- Redux-persist - Stores items in the cart to local storage.
+- Reselect - Used for memoization.
+
+---
+
+# React ReadMe
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
