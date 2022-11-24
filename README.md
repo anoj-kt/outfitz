@@ -9,7 +9,7 @@
 
 ## Description
 This is an E-commerce web application for a clothing retailer. You can view the tech stack used for this project [below](#tech-stack-used). <br/>
-I am currently working on improving the styling, mobile responsiveness and migrating the codebase to Typescript.
+I am currently working on improving the mobile responsiveness and migrating the codebase to Typescript.
 
 This application was first built using Context API and then migrated the state managment to Redux. However, for reference purposes, the older version using the Context API is under a different branch [here](https://github.com/anoj-kt/outfitz/tree/Application-with-useContext-(before-Redux)).
 
