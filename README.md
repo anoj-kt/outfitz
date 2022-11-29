@@ -32,6 +32,7 @@ This application was first built using Context API and then migrated the state m
 - Cart items will be saved in local storage.
 
 ## Currently working on
+- Restyling the UI.
 - Styling for mobile responsiveness.
 - Migrating codebase to Typescript.
 - Setting up stripe payment (on test mode).
