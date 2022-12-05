@@ -1,11 +1,12 @@
-import { useNavigate, Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { useNavigate } from 'react-router-dom';
 
 import { 
     BannerContainer,
     BannerContent,
     BannerText,
-    BannerButtons 
+    BannerButtons,
+    BannerHashLink,
+    DownArrowIcon 
 } from './banner-home.styles';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
@@ -28,7 +29,10 @@ const BannerHome = () => {
                 <Button buttonType={BUTTON_TYPE_CLASSES.inverted} onClick={() => goToCategory('womens')}>For Women</Button>
                 <Button buttonType={BUTTON_TYPE_CLASSES.inverted} onClick={() => goToCategory('mens')}>For Men</Button>
             </BannerButtons>
-                <HashLink smooth to='#exploreCategories'>Explore categories</HashLink>
+            <BannerHashLink smooth to='#exploreCategories'>
+                 <span>Explore more categories</span>
+                 <DownArrowIcon />
+            </BannerHashLink>
         </BannerContent>
       </BannerContainer>
   );
