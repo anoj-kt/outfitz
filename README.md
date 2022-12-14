@@ -30,17 +30,19 @@ This application was first built using Context API and then migrated the state m
 - Any user could sign up with their email or with their Google account.
 - User can add to the cart and edit them. 
 - Cart items will be saved in local storage.
+- Credit card payment process using Stripe (test mode).
 
 ## Currently working on
 - Restyling the UI.
 - Styling for mobile responsiveness.
 - Migrating codebase to Typescript.
-- Setting up stripe payment (on test mode).
 
 ## Other dependencies/libraries used
-- Redux-logger as development dependency - Logs the previous state, action and next state to console.
-- Redux-persist - Stores items in the cart to local storage.
-- Reselect - Used for memoization.
+- Redux-logger as development dependency : Logs the previous state, action and next state to console.
+- Redux-persist : Stores items in the cart to local storage.
+- Reselect : Used for memoization.
+- React-router-hash-link : For linking other component with element ID.
+- Netlify-cli : To create serverless functions (for credit card payment)
 <br>
 
 ---
