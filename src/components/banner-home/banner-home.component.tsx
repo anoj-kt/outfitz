@@ -13,7 +13,7 @@ import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 const BannerHome = () => {
     const navigate = useNavigate();
 
-    const goToCategory = (categoryType) => {
+    const goToCategory = (categoryType: string) => {
         navigate(`/shop/${categoryType}`)
     };
 
