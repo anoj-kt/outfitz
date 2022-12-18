@@ -19,6 +19,7 @@ This application was first built using Context API and then migrated the state m
 ## Tech stack used
 ![React JS](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Firebase 9](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
@@ -35,7 +36,6 @@ This application was first built using Context API and then migrated the state m
 ## Currently working on
 - Restyling the UI.
 - Styling for mobile responsiveness.
-- Migrating codebase to Typescript.
 
 ## Other dependencies/libraries used
 - Redux-logger as development dependency : Logs the previous state, action and next state to console.
