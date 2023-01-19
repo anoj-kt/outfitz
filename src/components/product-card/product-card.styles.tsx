@@ -7,7 +7,7 @@ export const ProductCartContainer = styled.div`
   height: fit-content;
   align-items: center;
   border: 1px solid grey;
-  padding: 10px;
+  padding: 5px;
 
   img {
     width: 100%;
@@ -15,6 +15,7 @@ export const ProductCartContainer = styled.div`
     object-fit: cover;
     margin-bottom: 5px;
   }
+
   button {
     width: 100%;
   }
@@ -27,6 +28,7 @@ export const Footer = styled.div`
   justify-content: space-between;
   font-size: 18px;
   margin-bottom: 12px;
+  padding: 10px;
 `;
 
 export const Name = styled.span`
