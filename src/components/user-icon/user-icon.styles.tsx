@@ -2,11 +2,6 @@ import styled from 'styled-components';
 
 import { ReactComponent as UserSVG } from '../../assets/user.svg';
 
-export const UserIcon = styled(UserSVG)`
-    height: 32px;
-    width: 32px;
-`;
-
 export const UserIconContainer = styled.div`
   width: 45px;
   height: 45px;
@@ -15,4 +10,9 @@ export const UserIconContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+`;
+
+export const UserIcon = styled(UserSVG)`
+  height: 32px;
+  width: 32px;
 `;

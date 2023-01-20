@@ -16,6 +16,7 @@ import {
     NavLinks,
     NavLink 
 } from './navigation.styles';
+import UserCircle from '../../components/user-circle/user-circle.component';
 
 const Navigation = () => {
     const dispatch = useDispatch();
@@ -42,6 +43,7 @@ const Navigation = () => {
                         </NavLink>
                     )}
                     <CartIcon />
+                    <UserCircle />
                 </NavLinks>
                 {isCartOpen && <CartDropDown />}
             </NavigationContainer>
