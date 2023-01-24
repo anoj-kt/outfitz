@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const UserDropdownContainer = styled.div`
   position: absolute;
   width: 260px;
-  height: 340px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -18,4 +18,8 @@ export const UserDropdownContainer = styled.div`
 export const UserDropdownLink = styled(Link)`
   width: 100%;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid black;
 `;

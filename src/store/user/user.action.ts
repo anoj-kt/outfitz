@@ -52,7 +52,7 @@ export type SignOutFailed = ActionWithPayload<
   Error
 >;
 
-export const setIsUserDopdownOpen = withMatcher((boolean: boolean) =>
+export const setIsUserDropdownOpen = withMatcher((boolean: boolean) =>
   createAction(USER_ACTION_TYPES.SET_IS_USERDROPDOWN_OPEN, boolean)
 );
 

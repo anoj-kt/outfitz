@@ -6,7 +6,7 @@ import {
   signInFailed,
   signUpFailed,
   signOutFailed,
-  setIsUserDopdownOpen,
+  setIsUserDropdownOpen,
 } from './user.action';
 
 import { UserData } from '../../utils/firebase/firebase.utils';
@@ -29,7 +29,7 @@ export const userReducer = (
   state = INITIAL_STATE,
   action = {} as AnyAction
 ) => {
-  if(setIsUserDopdownOpen.match(action)) {
+  if(setIsUserDropdownOpen.match(action)) {
     return {
       ...state,
       isUserDropdownOpen: action.payload,

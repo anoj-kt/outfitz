@@ -4,7 +4,6 @@ import { User } from 'firebase/auth';
 import { USER_ACTION_TYPES } from './user.types';
 
 import {
-  setIsUserDopdownOpen,
   signInSuccess,
   signInFailed,
   signUpSuccess,
