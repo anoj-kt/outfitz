@@ -4,6 +4,11 @@ import { createAction, withMatcher, Action, ActionWithPayload } from '../../util
 import { UserData, AdditionalInformation } from '../../utils/firebase/firebase.utils';
 import { User } from 'firebase/auth';
 
+export type SetIsUserDropdownOpen = ActionWithPayload<
+  USER_ACTION_TYPES.SET_IS_USERDROPDOWN_OPEN,
+  boolean
+>;
+
 export type CheckUserSession = Action<USER_ACTION_TYPES.CHECK_USER_SESSION>;
 
 export type GoogleSignInStart = Action<USER_ACTION_TYPES.GOOGLE_SIGN_IN_START>;
@@ -46,6 +51,10 @@ export type SignOutFailed = ActionWithPayload<
   USER_ACTION_TYPES.SIGN_OUT_FAILED,
   Error
 >;
+
+export const setIsUserDopdownOpen = withMatcher((boolean: boolean) =>
+  createAction(USER_ACTION_TYPES.SET_IS_USERDROPDOWN_OPEN, boolean)
+);
 
 export const checkUserSession = withMatcher(
   (): CheckUserSession => createAction(USER_ACTION_TYPES.CHECK_USER_SESSION)

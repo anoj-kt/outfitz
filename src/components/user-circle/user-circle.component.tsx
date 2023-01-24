@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectCurrentUser } from '../../store/user/user.selector';
+import { selectCurrentUser, selectIsUserDropdownOpen } from '../../store/user/user.selector';
+import UserDropdown from '../user-dropdown/user-dropdown.component';
 
 import {
   UserCircleContainer,
@@ -10,6 +11,7 @@ import {
 
 const UserCircleIcon = () => {
   const currentUser = useSelector(selectCurrentUser);
+  const drop = useSelector(selectIsUserDropdownOpen);
   const currentUserImage = currentUser?.photoURL;
   const currentUserInitial = currentUser?.displayName[0];
 
@@ -20,6 +22,9 @@ const UserCircleIcon = () => {
       ) : (
         <UserCircleWithInitial>{currentUserInitial}</UserCircleWithInitial>
       )}
+      {
+        drop && <UserDropdown />
+      }
     </UserCircleContainer>
   );
 };
