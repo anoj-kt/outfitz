@@ -22,11 +22,11 @@ const UserCircleIcon = () => {
   const toggleIsUserDropdownOpen = () => dispatch(setIsUserDropdownOpen(!drop));
 
   return (
-    <UserCircleContainer>
+    <UserCircleContainer onClick={toggleIsUserDropdownOpen}>
       {currentUserImage ? (
-        <UserCircleWithImage src={currentUserImage} onClick={toggleIsUserDropdownOpen}/>
+        <UserCircleWithImage src={currentUserImage}/>
       ) : (
-        <UserCircleWithInitial>{currentUserInitial}</UserCircleWithInitial>
+        <UserCircleWithInitial >{currentUserInitial}</UserCircleWithInitial>
       )}
       {
         drop && <UserDropdown />
