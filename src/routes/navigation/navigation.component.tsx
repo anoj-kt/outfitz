@@ -12,8 +12,9 @@ import { ReactComponent as Logo } from '../../assets/main-logo.svg';
 import {
   NavigationContainer,
   LogoContainer,
-  NavLinks,
   NavLink,
+  NavLinksCenter,
+  NavLinksRight
 } from './navigation.styles';
 
 import UserCircle from '../../components/user-circle/user-circle.component';
@@ -29,16 +30,19 @@ const Navigation = () => {
         <LogoContainer to='/'>
           <Logo />
         </LogoContainer>
-        <NavLinks>
+        <NavLinksCenter>
           <NavLink to='/'>HOME</NavLink>
           <NavLink to='/shop'>SHOP</NavLink>
+          <NavLink to='/'>ABOUT US</NavLink>
+        </NavLinksCenter>
+        <NavLinksRight>
           {currentUser ? (
             <UserCircle />
           ) : (
             <User />
           )}
           <CartIcon />
-        </NavLinks>
+        </NavLinksRight>
         {isCartOpen && <CartDropDown />}
       </NavigationContainer>
       <Outlet />
