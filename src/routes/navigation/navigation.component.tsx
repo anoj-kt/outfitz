@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropDown from '../../components/cart-dropdown/cart-dropdown.component';
@@ -30,6 +30,7 @@ const Navigation = () => {
           <Logo />
         </LogoContainer>
         <NavLinks>
+          <NavLink to='/'>HOME</NavLink>
           <NavLink to='/shop'>SHOP</NavLink>
           {currentUser ? (
             <UserCircle />

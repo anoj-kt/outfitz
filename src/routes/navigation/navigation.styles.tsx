@@ -6,7 +6,11 @@ export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  z-index: 100; 
 `;
 
 export const LogoContainer = styled(Link)`
