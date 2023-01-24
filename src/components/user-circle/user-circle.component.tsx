@@ -15,11 +15,11 @@ const UserCircleIcon = () => {
   const dispatch = useDispatch();
 
   const currentUser = useSelector(selectCurrentUser);
-  const drop = useSelector(selectIsUserDropdownOpen);
+  const isUserDropdownOpen = useSelector(selectIsUserDropdownOpen);
   const currentUserImage = currentUser?.photoURL;
   const currentUserInitial = currentUser?.displayName[0];
 
-  const toggleIsUserDropdownOpen = () => dispatch(setIsUserDropdownOpen(!drop));
+  const toggleIsUserDropdownOpen = () => dispatch(setIsUserDropdownOpen(!isUserDropdownOpen));
 
   return (
     <UserCircleContainer onClick={toggleIsUserDropdownOpen}>
@@ -29,7 +29,7 @@ const UserCircleIcon = () => {
         <UserCircleWithInitial >{currentUserInitial}</UserCircleWithInitial>
       )}
       {
-        drop && <UserDropdown />
+        isUserDropdownOpen && <UserDropdown />
       }
     </UserCircleContainer>
   );
