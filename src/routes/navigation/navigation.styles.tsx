@@ -30,8 +30,7 @@ const borderAnim = keyframes`
   100% {width: 100%}
 `;
 
-export const NavLinksCenter = styled.div`
-  //Contains 'Home', 'Shop' and 'About Us'
+export const NavLinksCenter = styled.div` //Contains 'Home', 'Shop' and 'About Us'
   height: 100%;
   display: flex;
   align-items: center;
@@ -52,8 +51,7 @@ export const NavLinksCenter = styled.div`
   }
 `;
 
-export const NavLinksRight = styled.div`
-  //Contains 'User', 'Cart' and 'WishList'
+export const NavLinksRight = styled.div` //Contains 'User', 'Cart' and 'WishList'
   height: 100%;
   display: flex;
   align-items: center;

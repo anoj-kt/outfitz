@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 
 import { SpinnerContainer } from '../spinner/spinner.styles';
 
@@ -8,9 +9,10 @@ export const BaseButton = styled.button`
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 35px 0 35px;
+  padding: 0 2rem;
+  margin: 0.25rem 0;
   font-size: 15px;
-  background-color: black;
+  background-color: ${theme.colors.secondaryDark};
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -43,7 +45,7 @@ export const InvertedButton = styled(BaseButton)`
   border: 1px solid black;
 
   &:hover {
-    background-color: #fab432;
+    background-color: ${theme.colors.primary};
     color: white;
     border: none;
   }

@@ -1,25 +1,28 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 import { Link } from 'react-router-dom';
 
 export const UserDropdownContainer = styled.div`
   position: absolute;
-  width: 260px;
-  height: 140px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border: 1px solid black;
-  background-color: white;
-  top: 90px;
-  right: 40px;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 2px solid ${theme.colors.secondaryDark};
+  background-color: ${theme.colors.background};
+  top: 45px;
+  right: 0;
   z-index: 5;
 `;
 
 export const UserDropdownLink = styled(Link)`
-  width: 100%;
-  height: 50%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.25rem;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid black;
+  border: 1px solid black;
 `;
