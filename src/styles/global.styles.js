@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: ${theme.navbarHeight} auto 0;
 		/* max-width: 1440px; */
 		background-color: ${theme.colors.background};
+		color: ${theme.colors.secondaryDark};
 
 		@media screen and (max-width: 800px) {
 			padding: 10px;

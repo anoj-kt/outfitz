@@ -9,6 +9,7 @@ export const theme = {
         tertiary: '#DC0000',
         tertiaryDark: '#850000',
         tertiaryLight: '#EF5454',
+        grey: '#CCD5DE',
         background: '#EFEFEF',
         success: '#66A15A'
     },
