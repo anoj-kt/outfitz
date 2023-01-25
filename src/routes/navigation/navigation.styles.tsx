@@ -47,7 +47,7 @@ export const NavLinksCenter = styled.div`
       bottom: 0;
       width: 0;
       border-bottom: 2px solid ${theme.colors.primary};
-      animation: ${borderAnim} .3s linear forwards;
+      animation: ${borderAnim} .2s linear forwards;
     }
   }
 `;
@@ -61,8 +61,8 @@ export const NavLinksRight = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding-bottom: 0.3rem;
-  margin: 0.75rem 1rem;
+  padding: 0.25rem 0.3rem;
+  margin: 0.75rem 0.75rem;
   cursor: pointer;
   font-weight: 700;
 `;
