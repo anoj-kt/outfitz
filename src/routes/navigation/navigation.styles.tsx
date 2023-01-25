@@ -13,6 +13,7 @@ export const NavigationContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 100;
+  box-shadow: 0px 10px 16px -16px ${theme.colors.secondaryDark};
 `;
 
 export const LogoContainer = styled(Link)`
