@@ -4,7 +4,9 @@ import { theme } from './theme.styles';
 export const GlobalStyle = createGlobalStyle`
     body {
 		font-family: ${theme.font};
-		margin-top: ${theme.navbarHeight};
+		margin: ${theme.navbarHeight} auto 0;
+		/* max-width: 1440px; */
+		background-color: ${theme.colors.background};
 
 		@media screen and (max-width: 800px) {
 			padding: 10px;

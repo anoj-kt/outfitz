@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { theme } from '../../styles/theme.styles';
 import { Link } from 'react-router-dom';
 
-export const NavigationContainer = styled.div`
+export const NavigationBar = styled.div`
   background-color: ${theme.colors.background};
   height: ${theme.navbarHeight};
   width: 100%;
@@ -14,6 +14,14 @@ export const NavigationContainer = styled.div`
   left: 0;
   z-index: 100;
   box-shadow: 0px 10px 16px -16px ${theme.colors.secondaryDark};
+`;
+
+export const NavigationContainer = styled.div`
+  width: 100%; 
+  max-width: 1440px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const LogoContainer = styled(Link)`

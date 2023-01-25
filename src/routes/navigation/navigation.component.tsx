@@ -12,7 +12,8 @@ import {
   LogoContainer,
   NavLink,
   NavLinksCenter,
-  NavLinksRight
+  NavLinksRight,
+  NavigationBar,
 } from './navigation.styles';
 
 import UserCircle from '../../components/user-circle/user-circle.component';
@@ -23,24 +24,22 @@ const Navigation = () => {
 
   return (
     <>
-      <NavigationContainer>
-        <LogoContainer to='/'>
-          <Logo />
-        </LogoContainer>
-        <NavLinksCenter>
-          <NavLink to='/'>HOME</NavLink>
-          <NavLink to='/shop'>SHOP</NavLink>
-          <NavLink to='/'>ABOUT US</NavLink>
-        </NavLinksCenter>
-        <NavLinksRight>
-          {currentUser ? (
-            <UserCircle />
-          ) : (
-            <User />
-          )}
-          <CartIcon />
-        </NavLinksRight>
-      </NavigationContainer>
+      <NavigationBar>
+        <NavigationContainer>
+          <LogoContainer to='/'>
+            <Logo />
+          </LogoContainer>
+          <NavLinksCenter>
+            <NavLink to='/'>HOME</NavLink>
+            <NavLink to='/shop'>SHOP</NavLink>
+            <NavLink to='/'>ABOUT US</NavLink>
+          </NavLinksCenter>
+          <NavLinksRight>
+            {currentUser ? <UserCircle /> : <User />}
+            <CartIcon />
+          </NavLinksRight>
+        </NavigationContainer>
+      </NavigationBar>
       <Outlet />
     </>
   );
