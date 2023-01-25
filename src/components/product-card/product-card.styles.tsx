@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 
 export const ProductCartContainer = styled.div`
   width: 100%;
+  background-color: ${theme.colors.grey};
   display: flex;
   flex-direction: column;
   height: fit-content;
   align-items: center;
-  border: 1px solid grey;
   padding: 5px;
 
   img {
@@ -36,6 +37,6 @@ export const Name = styled.span`
 `;
 
 export const Price = styled.span`
-  color: #FCA502;
+  color: ${theme.colors.primaryDark};
   font-weight: 600;
 `;

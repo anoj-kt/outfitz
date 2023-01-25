@@ -84,6 +84,7 @@ export type UserData = {
   createdAt: Date;
   email: string;
   displayName: string;
+  photoURL: string;
 };
 
 export const createUserDocumentFromAuth = async (
@@ -97,7 +98,7 @@ export const createUserDocumentFromAuth = async (
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
-    const { displayName, email } = userAuth;
+    const { displayName, email, photoURL } = userAuth;
     const createdAt = new Date();
 
     try {
@@ -105,6 +106,7 @@ export const createUserDocumentFromAuth = async (
         displayName,
         email,
         createdAt,
+        photoURL,
         ...additionalInformation,
       });
     } catch (error) {
