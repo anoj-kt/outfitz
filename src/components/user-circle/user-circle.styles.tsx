@@ -7,6 +7,7 @@ export const UserCircleContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: relative;
 `;
 
 export const UserCircleWithImage = styled.img`
