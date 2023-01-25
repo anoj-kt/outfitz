@@ -8,6 +8,7 @@ import {
     CartIconContainer, 
     ItemCount 
 } from './cart-icon.styles';
+import CartDropDown from '../cart-dropdown/cart-dropdown.component';
 
 const CartIcon = () => {
     const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const CartIcon = () => {
             ? <ItemCount>{cartCount}</ItemCount>
             : null
             }
-            
+            {isCartOpen && <CartDropDown/>}
         </CartIconContainer>
     )
 }

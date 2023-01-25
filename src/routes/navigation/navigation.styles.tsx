@@ -57,6 +57,7 @@ export const NavLinksRight = styled.div` //Contains 'User', 'Cart' and 'WishList
   display: flex;
   align-items: center;
   justify-content: center;
+  
 `;
 
 export const NavLink = styled(Link)`

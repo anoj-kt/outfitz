@@ -1,11 +1,13 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
+
 import { HashLink } from 'react-router-hash-link';
 
 import bannerImage from '../../assets/banner-home8.jpg';
 import { ReactComponent as DownArrowSvg }from '../../assets/down-arrow.svg';
 
 export const BannerContainer = styled.div`
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     background-image: url(${bannerImage});
     background-size: cover;
     background-position: top;
