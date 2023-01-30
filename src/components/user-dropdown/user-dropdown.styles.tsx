@@ -22,6 +22,10 @@ export const UserDropdownContainer = styled.div`
   top: 52.5px;
   right: 0;
   z-index: 5;
+
+  & span {
+    color: ${theme.colors.tertiary};
+  }
 `;
 
 export const UserDropdownLink = styled(Link)`

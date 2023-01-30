@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 
 export const CartItemContainer = styled.div`
+  border-bottom: 1px solid ${theme.colors.grey};
   width: 100%;
+  padding: .25rem 0;
   display: flex;
   height: 80px;
-  margin-bottom: 15px;
   img {
     width: 30%;
   }
@@ -12,12 +14,23 @@ export const CartItemContainer = styled.div`
 
 export const ItemDetails = styled.div`
   width: 70%;
+  padding: 0 .4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 10px 20px;
-  span {
-    font-size: 16px;
+  justify-content: space-around;
+  
+  & :first-child {
+    font-weight: 500;
+  }
+
+  & :nth-child(2) {
+    font-weight: 500;
+    color: ${theme.colors.primaryDark}
+  }
+
+  & :nth-child(3) {
+    font-weight: 300;
+    color: ${theme.colors.secondaryDark}
   }
 `;
