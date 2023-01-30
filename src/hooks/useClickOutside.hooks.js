@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 
-
 export const useClickoutside = (domNode, handler) => {
-
   useEffect(() => {
-    console.log('Passed down as node arg', domNode.current)
+    console.log('Passed down as node arg', domNode.current.parentElement);
 
     const dropdownCloser = (event) => {
-      if (!domNode.current.contains(event.target)) {
-        console.log(event.target);
+      if (
+        !domNode.current.contains(event.target) &&
+        !domNode.current.parentElement.contains(event.target)
+      ) {
+        console.log(event.target.parentElement);
         handler();
       }
     };
@@ -20,6 +21,5 @@ export const useClickoutside = (domNode, handler) => {
     };
   }, []);
 
-   return domNode;
+  return domNode;
 };
-
