@@ -16,8 +16,8 @@ const User = () => {
     dispatch(setIsUserDropdownOpen(!isUserDropdownOpen));
 
   return (
-    <UserIconContainer onClick={toggleIsUserDropdownOpen}>
-      <UserIcon />
+    <UserIconContainer>
+      <UserIcon onClick={toggleIsUserDropdownOpen}/>
       {isUserDropdownOpen && <UserDropdown/>}
     </UserIconContainer>
   );

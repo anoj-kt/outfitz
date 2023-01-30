@@ -6,7 +6,6 @@ export const UserCircleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   position: relative;
 `;
 
@@ -15,6 +14,7 @@ export const UserCircleWithImage = styled.img`
   width: 32px;
   border-radius: 50%;
   outline: 1px solid black;
+  cursor: pointer;
 `;
 
 export const UserCircleWithInitial = styled.div`
@@ -26,4 +26,5 @@ export const UserCircleWithInitial = styled.div`
   border-radius: 50%;
   outline: 1px solid black;
   background-color: lightgray;
+  cursor: pointer;
 `;

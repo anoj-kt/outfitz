@@ -9,10 +9,10 @@ export const UserIconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 `;
 
 export const UserIcon = styled(UserSVG)`
   height: 32px;
   width: 32px;
+  cursor: pointer;
 `;
