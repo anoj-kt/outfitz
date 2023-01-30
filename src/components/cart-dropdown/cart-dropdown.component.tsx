@@ -1,9 +1,12 @@
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
+
+import { useClickoutside } from '../../hooks/useClickOutside.hooks';
 
 import Button from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
-import { selectCartItems } from '../../store/cart/cart.selector';
 
 import {
   CartDropdownContainer,
@@ -11,16 +14,25 @@ import {
   CartItems,
 } from './cart-dropdown.styles';
 
+import { selectCartItems } from '../../store/cart/cart.selector';
+import { setIsCartOpen } from '../../store/cart/cart.action';
+
+
 const CartDropDown = () => {
+  const cartDropdownMenu = useRef(null);
   const cartItems = useSelector(selectCartItems);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const goToCheckoutHandler = () => {
     navigate('/checkout');
   };
+  const toggleIsCartDropdownOpen = () => dispatch(setIsCartOpen(false));
+
+  useClickoutside(cartDropdownMenu, toggleIsCartDropdownOpen) // Closes Cart Dropdown Menu when user clicks outside
 
   return (
-    <CartDropdownContainer>
+    <CartDropdownContainer ref={cartDropdownMenu}>
       <CartItems>
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)

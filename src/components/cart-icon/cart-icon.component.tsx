@@ -19,8 +19,8 @@ const CartIcon = () => {
     const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen));
 
     return (
-        <CartIconContainer onClick={toggleIsCartOpen}>
-            <ShoppingIcon/>
+        <CartIconContainer>
+            <ShoppingIcon onClick={toggleIsCartOpen}/>
             {cartCount > 0 
             ? <ItemCount>{cartCount}</ItemCount>
             : null
