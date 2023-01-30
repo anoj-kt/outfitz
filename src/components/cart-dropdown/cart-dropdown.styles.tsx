@@ -15,7 +15,7 @@ export const CartDropdownContainer = styled.div`
   flex-direction: column;
   padding: 1rem;
   border: 2px solid ${theme.colors.secondaryDark};
-  border-radius: ${theme.borderRadius};
+  border-radius: ${theme.borderRadius.general};
   background-color: ${theme.colors.background};
   top: 52.5px;
   right: 0;

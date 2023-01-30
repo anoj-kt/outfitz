@@ -12,6 +12,7 @@ export const BaseButton = styled.button`
   margin: 0.25rem 0;
   font-size: 1rem;
   background-color: ${theme.colors.secondaryDark};
+  border-radius: ${theme.borderRadius.button};
   color: white;
   text-transform: uppercase;
   font-weight: 700;
