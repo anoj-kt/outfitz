@@ -31,3 +31,12 @@ export const UserCircleWithInitial = styled.div`
   font-weight: 700;
   cursor: pointer;
 `;
+
+export const PointerTriangle = styled.div`
+  background-color: ${theme.colors.secondaryDark};
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+	width: 50%;
+	height: 20%;
+  position: absolute;
+  bottom: -7.5px;
+`;

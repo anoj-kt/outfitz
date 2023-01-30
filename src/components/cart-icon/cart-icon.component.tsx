@@ -8,6 +8,7 @@ import {
     CartIconContainer, 
     ItemCount 
 } from './cart-icon.styles';
+import { PointerTriangle } from '../user-circle/user-circle.styles';
 import CartDropDown from '../cart-dropdown/cart-dropdown.component';
 
 const CartIcon = () => {
@@ -25,7 +26,7 @@ const CartIcon = () => {
             ? <ItemCount>{cartCount}</ItemCount>
             : null
             }
-            {isCartOpen && <CartDropDown/>}
+            {isCartOpen && <><PointerTriangle /><CartDropDown/></>} 
         </CartIconContainer>
     )
 }

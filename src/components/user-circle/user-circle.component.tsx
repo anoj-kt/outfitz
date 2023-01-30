@@ -12,6 +12,7 @@ import {
   UserCircleContainer,
   UserCircleWithImage,
   UserCircleWithInitial,
+  PointerTriangle
 } from './user-circle.styles';
 
 const UserCircleIcon = () => {
@@ -37,7 +38,7 @@ const UserCircleIcon = () => {
           {currentUserInitial}
         </UserCircleWithInitial>
       )}
-      {isUserDropdownOpen && <UserDropdown />}
+      {isUserDropdownOpen && <><PointerTriangle /><UserDropdown/></>}
     </UserCircleContainer>
   );
 };
