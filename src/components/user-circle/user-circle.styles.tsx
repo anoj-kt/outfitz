@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 
 export const UserCircleContainer = styled.div`
   width: 45px;
@@ -25,6 +26,8 @@ export const UserCircleWithInitial = styled.div`
   width: 32px;
   border-radius: 50%;
   outline: 1px solid black;
-  background-color: lightgray;
+  background-color: ${theme.colors.tertiaryLight};
+  color: white;
+  font-weight: 700;
   cursor: pointer;
 `;
