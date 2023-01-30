@@ -12,15 +12,17 @@ import {
   CartDropdownContainer,
   EmptyMessage,
   CartItems,
+  SubTotal,
 } from './cart-dropdown.styles';
 
-import { selectCartItems } from '../../store/cart/cart.selector';
+import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
 import { setIsCartOpen } from '../../store/cart/cart.action';
 
 
 const CartDropDown = () => {
   const cartDropdownMenu = useRef(null);
   const cartItems = useSelector(selectCartItems);
+  const cartTotal = useSelector(selectCartTotal);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -40,6 +42,10 @@ const CartDropDown = () => {
           <EmptyMessage>Your cart is empty!</EmptyMessage>
         )}
       </CartItems>
+      <SubTotal>
+        <span>Sub Total:</span>
+        <span>{cartTotal}€</span>
+      </SubTotal>
       <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </CartDropdownContainer>
   );
