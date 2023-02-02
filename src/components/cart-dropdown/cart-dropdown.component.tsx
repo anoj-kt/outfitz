@@ -15,9 +15,11 @@ import {
   SubTotal,
 } from './cart-dropdown.styles';
 
-import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
+import {
+  selectCartItems,
+  selectCartTotal,
+} from '../../store/cart/cart.selector';
 import { setIsCartOpen } from '../../store/cart/cart.action';
-
 
 const CartDropDown = () => {
   const cartDropdownMenu = useRef(null);
@@ -31,7 +33,7 @@ const CartDropDown = () => {
   };
   const toggleIsCartDropdownOpen = () => dispatch(setIsCartOpen(false));
 
-  useClickoutside(cartDropdownMenu, toggleIsCartDropdownOpen) // Closes Cart Dropdown Menu when user clicks outside
+  useClickoutside(cartDropdownMenu, toggleIsCartDropdownOpen); // Closes Cart Dropdown Menu when user clicks outside
 
   return (
     <CartDropdownContainer ref={cartDropdownMenu}>
@@ -42,10 +44,12 @@ const CartDropDown = () => {
           <EmptyMessage>Your cart is empty!</EmptyMessage>
         )}
       </CartItems>
-      <SubTotal>
-        <span>Sub Total:</span>
-        <span>{cartTotal}€</span>
-      </SubTotal>
+      {(cartItems.length > 0) && (
+        <SubTotal>
+          <span>Sub Total:</span>
+          <span>{cartTotal}€</span>
+        </SubTotal>
+      )}
       <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </CartDropdownContainer>
   );
