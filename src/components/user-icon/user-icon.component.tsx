@@ -1,24 +1,15 @@
-import { useSelector, useDispatch } from 'react-redux';
-
-import { selectIsUserDropdownOpen } from '../../store/user/user.selector';
-import { setIsUserDropdownOpen } from '../../store/user/user.action';
+import { useNavigate } from 'react-router-dom';
 
 import { UserIcon, UserIconContainer } from './user-icon.styles';
 
-import UserDropdown from '../user-dropdown/user-dropdown.component';
-
 const User = () => {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const isUserDropdownOpen = useSelector(selectIsUserDropdownOpen);
-
-  const toggleIsUserDropdownOpen = () =>
-    dispatch(setIsUserDropdownOpen(!isUserDropdownOpen));
+  const goToAuth = () => navigate('/auth');
 
   return (
-    <UserIconContainer onClick={toggleIsUserDropdownOpen}>
-      <UserIcon />
-      {isUserDropdownOpen && <UserDropdown/>}
+    <UserIconContainer>
+      <UserIcon onClick={goToAuth} />
     </UserIconContainer>
   );
 };

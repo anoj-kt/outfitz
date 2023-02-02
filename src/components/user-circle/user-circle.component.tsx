@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectCurrentUser, selectIsUserDropdownOpen } from '../../store/user/user.selector';
+import {
+  selectCurrentUser,
+  selectIsUserDropdownOpen,
+} from '../../store/user/user.selector';
 import { setIsUserDropdownOpen } from '../../store/user/user.action';
 
 import UserDropdown from '../user-dropdown/user-dropdown.component';
@@ -9,6 +12,7 @@ import {
   UserCircleContainer,
   UserCircleWithImage,
   UserCircleWithInitial,
+  PointerTriangle
 } from './user-circle.styles';
 
 const UserCircleIcon = () => {
@@ -19,18 +23,22 @@ const UserCircleIcon = () => {
   const currentUserImage = currentUser?.photoURL;
   const currentUserInitial = currentUser?.displayName[0];
 
-  const toggleIsUserDropdownOpen = () => dispatch(setIsUserDropdownOpen(!isUserDropdownOpen));
+  const toggleIsUserDropdownOpen = () =>
+    dispatch(setIsUserDropdownOpen(!isUserDropdownOpen));
 
   return (
-    <UserCircleContainer onClick={toggleIsUserDropdownOpen}>
+    <UserCircleContainer>
       {currentUserImage ? (
-        <UserCircleWithImage src={currentUserImage}/>
+        <UserCircleWithImage
+          src={currentUserImage}
+          onClick={toggleIsUserDropdownOpen}
+        />
       ) : (
-        <UserCircleWithInitial >{currentUserInitial}</UserCircleWithInitial>
+        <UserCircleWithInitial onClick={toggleIsUserDropdownOpen}>
+          {currentUserInitial}
+        </UserCircleWithInitial>
       )}
-      {
-        isUserDropdownOpen && <UserDropdown />
-      }
+      {isUserDropdownOpen && <><PointerTriangle /><UserDropdown/></>}
     </UserCircleContainer>
   );
 };

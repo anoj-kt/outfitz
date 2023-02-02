@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme.styles';
 
 export const CategoryContainer = styled.div`
   display: grid;
@@ -9,6 +10,7 @@ export const CategoryContainer = styled.div`
 `;
 
 export const Title = styled.h2`
+  margin-top: ${theme.navbarHeight};
   font-size: 38px;
   margin-bottom: 25px;
   text-align: center;

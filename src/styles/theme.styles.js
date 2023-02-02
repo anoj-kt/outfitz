@@ -15,5 +15,9 @@ export const theme = {
     },
     navbarHeight: '60px',
     font: 'Roboto, sans-serif',
+    borderRadius: {
+        general: '10px',
+        button: '5px'
+    },
 
 }

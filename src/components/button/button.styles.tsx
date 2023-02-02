@@ -12,6 +12,7 @@ export const BaseButton = styled.button`
   margin: 0.25rem 0;
   font-size: 1rem;
   background-color: ${theme.colors.secondaryDark};
+  border-radius: ${theme.borderRadius.button};
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -24,7 +25,6 @@ export const BaseButton = styled.button`
   &:hover {
     background-color: white;
     color: black;
-    border: 1px solid black;
   }
 `;
 
@@ -41,7 +41,6 @@ export const GoogleSignInButton = styled(BaseButton)`
 export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;
-  border: 1px solid black;
 
   &:hover {
     background-color: ${theme.colors.primary};

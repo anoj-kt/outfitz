@@ -34,7 +34,7 @@ export const LogoContainer = styled(Link)`
   }
 `;
 
-const borderAnim = keyframes`
+const borderAnim = keyframes` //Animation for the line under navlinks when hovered
   0% {width: 0%}
   100% {width: 100%}
 `;

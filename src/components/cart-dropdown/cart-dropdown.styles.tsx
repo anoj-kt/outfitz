@@ -9,14 +9,15 @@ import {
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 260px;
-  height: 340px;
+  width: 280px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   border: 2px solid ${theme.colors.secondaryDark};
+  border-radius: ${theme.borderRadius.general};
   background-color: ${theme.colors.background};
-  top: 45px;
+  top: 52.5px;
   right: 0;
   z-index: 5;
 
@@ -39,8 +40,15 @@ export const CartItems = styled.div`
   overflow: auto;
 `;
 
+export const SubTotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 0.1rem;
+  border-top: 2px solid ${theme.colors.grey};
 
-//   button {
-//     margin-top: auto;
-//   }
-// }
+  & :last-child {
+    font-weight: 500;
+    color: ${theme.colors.primaryDark}
+  }
+`;
+
