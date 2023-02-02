@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme.styles';
 
+import { ReactComponent as TrashSVG } from '../../assets/trash.svg';
+
 export const CartItemContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.grey};
   width: 100%;
@@ -33,4 +35,11 @@ export const ItemDetails = styled.div`
     font-weight: 300;
     color: ${theme.colors.secondaryDark}
   }
+`;
+
+export const TrashIcon = styled(TrashSVG)`
+  fill: ${theme.colors.tertiary};
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
 `;
