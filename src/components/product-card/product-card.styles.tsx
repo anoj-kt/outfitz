@@ -3,12 +3,14 @@ import { theme } from '../../styles/theme.styles';
 
 export const ProductCartContainer = styled.div`
   width: 100%;
-  background-color: ${theme.colors.grey};
+  background-color: white;
   display: flex;
   flex-direction: column;
   height: fit-content;
   align-items: center;
-  padding: 5px;
+  box-shadow: 0px 10px 8px -3px rgba(0,0,0,0.1);
+  border-radius: ${theme.borderRadius.general};
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -18,7 +20,8 @@ export const ProductCartContainer = styled.div`
   }
 
   button {
-    width: 100%;
+    width: 90%;
+    margin-bottom: .25rem;
   }
 `;
 
@@ -26,17 +29,21 @@ export const Footer = styled.div`
   width: 100%;
   height: 5%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  font-size: 18px;
-  margin-bottom: 12px;
-  padding: 10px;
+  margin-bottom: .5rem;
+  padding: .5rem;
 `;
 
 export const Name = styled.span`
-
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: .25rem;
 `;
 
 export const Price = styled.span`
   color: ${theme.colors.primaryDark};
   font-weight: 600;
+  font-size: 1.75rem;
 `;
