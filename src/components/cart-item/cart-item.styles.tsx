@@ -9,6 +9,7 @@ export const CartItemContainer = styled.div`
   padding: .25rem 0;
   display: flex;
   height: 80px;
+
   img {
     width: 30%;
   }
@@ -38,7 +39,7 @@ export const ItemDetails = styled.div`
 `;
 
 export const TrashIcon = styled(TrashSVG)`
-  fill: ${theme.colors.tertiary};
+  fill: ${theme.colors.danger};
   height: 24px;
   width: 24px;
   cursor: pointer;
