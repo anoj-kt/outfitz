@@ -13,6 +13,7 @@ import PaymentForm from './routes/payment-form/payment-form.component';
 import { GlobalStyle } from './styles/global.styles';
 
 import { checkUserSession } from './store/user/user.action';
+import Footer from './components/footer/footer.component';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const App = () => {
           <Route path='payment' element={<PaymentForm />} />
         </Route>
       </Routes>
+      <Footer/>
     </>
   );
 };

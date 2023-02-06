@@ -25,7 +25,7 @@ export const ProductCartContainer = styled.div`
   }
 `;
 
-export const Footer = styled.div`
+export const Content = styled.div`
   width: 100%;
   height: 5%;
   display: flex;

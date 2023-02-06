@@ -9,7 +9,7 @@ import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 import {
     ProductCartContainer,
-    Footer,
+    Content,
     Name,
     Price,
   } from './product-card.styles';
@@ -29,10 +29,10 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
     return (
         <ProductCartContainer>
             <img src={imageUrl} alt={name} />
-            <Footer>
+            <Content>
                 <Name>{name}</Name>
                 <Price>{price + '€'}</Price>
-            </Footer>
+            </Content>
             <Button buttonType={BUTTON_TYPE_CLASSES.primary} onClick={addProductToCart}>Add to cart</Button>
         </ProductCartContainer>
     )
