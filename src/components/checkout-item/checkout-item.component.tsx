@@ -3,49 +3,57 @@ import { FC, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { selectCartItems } from '../../store/cart/cart.selector';
-import { addItemToCart, removeItemFromCart, clearItemFromCart } from '../../store/cart/cart.action';
+import {
+  addItemToCart,
+  removeItemFromCart,
+  clearItemFromCart,
+} from '../../store/cart/cart.action';
 
 import {
-    CheckoutItemContainer,
-    ImageContainer,
-    BaseSpan,
-    Quantity,
-    Arrow,
-    Value,
-    RemoveButton,
-  } from './checkout-item.styles';
+  CheckoutItemContainer,
+  ImageContainer,
+  Quantity,
+  MinusIcon,
+  PlusIcon,
+  Price,
+  ContentContainer,
+  TrashIcon,
+} from './checkout-item.styles';
 
 import { CartItem } from '../../store/cart/cart.types';
 
 type CheckoutItemProps = {
-cartItem: CartItem;
+  cartItem: CartItem;
 };
 
 const CheckoutItem: FC<CheckoutItemProps> = memo(({ cartItem }) => {
-    const { name, imageUrl, price, quantity } = cartItem;
-    const cartItems = useSelector(selectCartItems)
-    const dispatch = useDispatch();
-    
+  const { name, imageUrl, price, quantity } = cartItem;
+  const cartItems = useSelector(selectCartItems);
+  const dispatch = useDispatch();
 
-    const clearItemHandler = () => dispatch(clearItemFromCart(cartItems, cartItem));
-    const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
-    const removeItemHandler = () => dispatch(removeItemFromCart(cartItems, cartItem));
+  const clearItemHandler = () =>
+    dispatch(clearItemFromCart(cartItems, cartItem));
+  const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
+  const removeItemHandler = () =>
+    dispatch(removeItemFromCart(cartItems, cartItem));
 
-    return (
-        <CheckoutItemContainer>
-            <ImageContainer>
-                <img src={imageUrl} alt={name} />
-            </ImageContainer>
-            <BaseSpan>{name}</BaseSpan>
-            <Quantity>
-                <Arrow onClick={removeItemHandler}>&#10094;</Arrow>
-                <Value>{quantity}</Value>
-                <Arrow onClick={addItemHandler}>&#10095;</Arrow>
-            </Quantity>
-            <BaseSpan>{price}€</BaseSpan>
-            <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
-        </CheckoutItemContainer>
-    )
+  return (
+    <CheckoutItemContainer>
+      <ImageContainer>
+        <img src={imageUrl} alt={name} />
+      </ImageContainer>
+      <ContentContainer>
+        <h4>{name}</h4>
+        <Quantity>
+          <span>Qty: {quantity}</span>
+          <MinusIcon onClick={removeItemHandler} />
+          <PlusIcon onClick={addItemHandler} />
+        </Quantity>
+        <Price>{price}€</Price>
+      </ContentContainer>
+      <TrashIcon onClick={clearItemHandler} />
+    </CheckoutItemContainer>
+  );
 });
 
-export default CheckoutItem; 
+export default CheckoutItem;

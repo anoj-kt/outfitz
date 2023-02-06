@@ -1,41 +1,70 @@
 import styled from 'styled-components';
 
+import { ReactComponent as MinusSVG } from '../../assets/minus-square-full.svg';
+import { ReactComponent as PlusSVG } from '../../assets/plus-square.svg';
+import { ReactComponent as TrashSVG } from '../../assets/trash.svg';
+import { theme } from '../../styles/theme.styles';
+
 export const CheckoutItemContainer = styled.div`
   width: 100%;
   display: flex;
+  align-items: flex-start;
+  font-size: 1.25rem;
   min-height: 100px;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid ${theme.colors.grey};
   padding: 15px 0;
-  font-size: 20px;
-  align-items: center;
 `;
 
 export const ImageContainer = styled.div`
-  width: 23%;
-  padding-right: 15px;
+  width: 25%;
+  padding-right: 1rem;
   img {
     width: 100%;
     height: 100%;
   }
 `;
 
-export const BaseSpan = styled.span`
-  width: 23%;
+export const ContentContainer = styled.div`
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h4{
+    margin: 0 0 .5rem 0;
+    font-size: 1.25rem;
+  }
 `;
 
-export const Quantity = styled(BaseSpan)`
+export const Quantity = styled.div`
   display: flex;
 `;
 
-export const Arrow = styled.div`
+export const MinusIcon = styled(MinusSVG)`
+  height: 24px;
+  width: 24px;
+  margin-left: .25rem;
+  fill: ${theme.colors.secondaryLight};
   cursor: pointer;
 `;
 
-export const Value = styled.span`
-  margin: 0 10px;
+export const PlusIcon = styled(PlusSVG)`
+  height: 24px;
+  width: 24px;
+  fill: ${theme.colors.secondaryLight};
+  cursor: pointer;
 `;
 
-export const RemoveButton = styled.div`
-  padding-left: 12px;
+export const Price = styled.span`
+  color: ${theme.colors.primaryDark};
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+`;
+
+export const TrashIcon = styled(TrashSVG)`
+  fill: ${theme.colors.danger};
+  height: 24px;
+  width: 24px;
   cursor: pointer;
 `;
