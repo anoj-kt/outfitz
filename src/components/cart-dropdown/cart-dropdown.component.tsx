@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { useClickoutside } from '../../hooks/useClickOutside.hooks';
 
-import Button from '../button/button.component';
+import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
 
 import {
@@ -50,7 +50,7 @@ const CartDropDown = () => {
           <span>{cartTotal}€</span>
         </SubTotal>
       )}
-      <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
+      <Button buttonType={BUTTON_TYPE_CLASSES.primary} onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </CartDropdownContainer>
   );
 };

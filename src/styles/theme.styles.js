@@ -11,7 +11,8 @@ export const theme = {
         tertiaryLight: '#EF5454',
         grey: '#CCD5DE',
         background: '#EFEFEF',
-        success: '#66A15A'
+        success: '#66A15A',
+        danger: '#FF0000',
     },
     navbarHeight: '60px',
     font: 'Roboto, sans-serif',
@@ -19,5 +20,4 @@ export const theme = {
         general: '10px',
         button: '5px'
     },
-
 }

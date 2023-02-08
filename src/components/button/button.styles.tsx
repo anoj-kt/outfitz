@@ -23,8 +23,8 @@ export const BaseButton = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: ${theme.colors.secondary};
+    /* color: ${theme.colors.secondaryDark}; */
   }
 `;
 
@@ -35,6 +35,21 @@ export const GoogleSignInButton = styled(BaseButton)`
   &:hover {
     background-color: #357ae8;
     border: none;
+  }
+`;
+
+export const PrimaryColorButton = styled(BaseButton)`
+  background-color: ${theme.colors.primary};
+  color: white;
+
+  &:hover {
+    background-color: ${theme.colors.primaryDark};
+    color: white;
+    border: none;
+  }
+
+  &:active {
+    background-color: ${theme.colors.primary};
   }
 `;
 
