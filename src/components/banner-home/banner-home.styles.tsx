@@ -8,20 +8,31 @@ import { ReactComponent as DownArrowSvg } from '../../assets/down-arrow.svg';
 export const BannerContainer = styled.div`
   height: calc(100vh - 60px);
   width: 100%;
+`;
+
+export const BannerImage = styled.div`
+  height: calc(100vh - 60px);
+  width: 100%;
   background-image: url(${bannerImage});
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
+  z-index: 10;
 `;
 
 export const BannerContent = styled.div`
   max-width: 1440px;
-  margin: 30vh auto 0 10vw;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  /* margin: 30vh auto 0 10vw; */
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  transform: translate(20%, 40%);
+  z-index: 20;
 `;
 
 export const BannerText = styled.div`
@@ -38,7 +49,6 @@ export const BannerButtons = styled.div`
   width: 25rem;
   display: flex;
   gap: 1rem;
-  flex-grow: 1;
 
   & > button {
     width: calc((100% - 1rem) / 2);

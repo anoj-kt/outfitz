@@ -6,7 +6,8 @@ import {
     BannerText,
     BannerButtons,
     BannerHashLink,
-    DownArrowIcon 
+    DownArrowIcon, 
+    BannerImage
 } from './banner-home.styles';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
@@ -19,6 +20,7 @@ const BannerHome = () => {
 
   return (
       <BannerContainer>
+        <BannerImage/>
         <BannerContent>
             <BannerText>
                 <p>New Collection.</p>

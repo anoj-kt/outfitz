@@ -6,7 +6,4 @@ export const DirectoryContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1rem auto;
-  position: absolute;
-  top: 100vh;
-  left: 0;
 `;
