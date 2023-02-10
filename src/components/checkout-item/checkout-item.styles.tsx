@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { ReactComponent as MinusSVG } from '../../assets/minus-square-full.svg';
-import { ReactComponent as PlusSVG } from '../../assets/plus-square.svg';
-import { ReactComponent as TrashSVG } from '../../assets/trash.svg';
+import { ReactComponent as MinusSVG } from '../../assets/icons/minus-square-full.svg';
+import { ReactComponent as PlusSVG } from '../../assets/icons/plus-square.svg';
+import { ReactComponent as TrashSVG } from '../../assets/icons/trash.svg';
 import { theme } from '../../styles/theme.styles';
 
 export const CheckoutItemContainer = styled.div`

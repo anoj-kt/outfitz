@@ -4,7 +4,7 @@ import { theme } from '../../styles/theme.styles';
 export const FooterContainer = styled.div`
   width: 100%;
   height: 10rem;
-  margin: 0;
+  margin: 1rem 0 0 0;
   color: ${theme.colors.background};
   position: absolute;
   left: 0;

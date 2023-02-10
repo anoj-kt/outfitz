@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
-import { HashLink } from 'react-router-hash-link';
-
-import bannerImage from '../../assets/banner-home8.jpg';
-import { ReactComponent as DownArrowSvg } from '../../assets/down-arrow.svg';
+import bannerImage from '../../assets/images/banner-home8.jpg';
+import { ReactComponent as DownArrowSvg } from '../../assets/icons/down-arrow.svg';
 
 export const BannerContainer = styled.div`
   height: calc(100vh - 60px);
   width: 100%;
+  margin-bottom: 1rem;
 `;
 
 export const BannerImage = styled.div`
@@ -27,12 +26,22 @@ export const BannerContent = styled.div`
   width: fit-content;
   height: fit-content;
   position: relative;
-  /* margin: 30vh auto 0 10vw; */
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
   transform: translate(20%, 40%);
   z-index: 20;
+
+  span {
+    padding: 2px 0;
+    border-bottom: 2px solid white;
+    color: white;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    margin: 1rem 0;
+    width: fit-content;
+    cursor: pointer;
+  }
 `;
 
 export const BannerText = styled.div`
@@ -55,19 +64,19 @@ export const BannerButtons = styled.div`
   }
 `;
 
-export const BannerHashLink = styled(HashLink)`
-  display: flex;
-  align-items: center;
-  color: white;
-  font-weight: 600;
-  padding: 0.25rem 0;
-  margin: 1rem 0;
+// export const BannerHashLink = styled(HashLink)`
+//   display: flex;
+//   align-items: center;
+//   color: white;
+//   font-weight: 600;
+//   padding: 0.25rem 0;
+//   margin: 1rem 0;
 
-  & > span {
-    padding: 2px 0;
-    border-bottom: 2px solid white;
-  }
-`;
+//   & > span {
+//     padding: 2px 0;
+//     border-bottom: 2px solid white;
+//   }
+// `;
 
 export const DownArrowIcon = styled(DownArrowSvg)`
   height: 32px;
