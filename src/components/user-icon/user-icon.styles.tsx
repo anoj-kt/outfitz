@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ReactComponent as UserSVG } from '../../assets/user.svg';
+import { ReactComponent as UserSVG } from '../../assets/icons/user.svg';
 
 export const UserIconContainer = styled.div`
   width: 45px;

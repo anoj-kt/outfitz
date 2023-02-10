@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme.styles';
 
-import { ReactComponent as TrashSVG } from '../../assets/trash.svg';
+import { ReactComponent as TrashSVG } from '../../assets/icons/trash.svg';
 
 export const CartItemContainer = styled.div`
   border-bottom: 1px solid ${theme.colors.grey};

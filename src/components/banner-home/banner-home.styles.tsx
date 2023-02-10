@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 import { HashLink } from 'react-router-hash-link';
 
-import bannerImage from '../../assets/banner-home8.jpg';
-import { ReactComponent as DownArrowSvg } from '../../assets/down-arrow.svg';
+import bannerImage from '../../assets/images/banner-home8.jpg';
+import { ReactComponent as DownArrowSvg } from '../../assets/icons/down-arrow.svg';
 
 export const BannerContainer = styled.div`
   height: calc(100vh - 60px);
