@@ -27,11 +27,13 @@ const CartDropDown = () => {
   const cartTotal = useSelector(selectCartTotal);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  
+  const toggleIsCartDropdownOpen = () => dispatch(setIsCartOpen(false));
+  
   const goToCheckoutHandler = () => {
     navigate('/checkout');
+    toggleIsCartDropdownOpen();
   };
-  const toggleIsCartDropdownOpen = () => dispatch(setIsCartOpen(false));
 
   useClickoutside(cartDropdownMenu, toggleIsCartDropdownOpen); // Closes Cart Dropdown Menu when user clicks outside
 
