@@ -6,6 +6,7 @@ import { ReactComponent as DownArrowSvg } from '../../assets/icons/down-arrow.sv
 export const BannerContainer = styled.div`
   height: calc(100vh - 60px);
   width: 100%;
+  margin-bottom: 1rem;
 `;
 
 export const BannerImage = styled.div`
