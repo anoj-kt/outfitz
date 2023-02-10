@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { ShopCategoryContainer } from './shop-category.styles';
+import { ShopCategoryCardContainer } from './shop-category-card.styles';
 
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
@@ -11,7 +11,7 @@ type ShopCategoryProps = {
   categoryName: string;
 };
 
-const ShopCategory: FC<ShopCategoryProps> = ({
+const ShopCategoryCard: FC<ShopCategoryProps> = ({
   imageUrl,
   categoryName,
   categoryUrl,
@@ -20,12 +20,12 @@ const ShopCategory: FC<ShopCategoryProps> = ({
   const goToCategory = () => navigate(categoryUrl);
 
   return (
-    <ShopCategoryContainer imageUrl={imageUrl}>
+    <ShopCategoryCardContainer imageUrl={imageUrl}>
       <Button buttonType={BUTTON_TYPE_CLASSES.primary} onClick={goToCategory}>
         {categoryName}
       </Button>
-    </ShopCategoryContainer>
+    </ShopCategoryCardContainer>
   );
 };
 
-export default ShopCategory;
+export default ShopCategoryCard;

@@ -7,7 +7,7 @@ type BackgroundImageProps = {
   imageUrl: string;
 };
 
-export const ShopCategoryContainer = styled.div<BackgroundImageProps>`
+export const ShopCategoryCardContainer = styled.div<BackgroundImageProps>`
   height: 500px;
   width: 20rem;
   margin: 0 .25rem;

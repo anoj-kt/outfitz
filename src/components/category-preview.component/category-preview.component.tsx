@@ -5,7 +5,7 @@ import { ShopContainer } from './category-preview.styles';
 import { CategoryItem } from '../../store/categories/category.types';
 
 import { shopCategoryData } from './shopCategoriesData';
-import ShopCategory from '../shop-category/shop-category.component';
+import ShopCategoryCard from '../shop-category-card/shop-category-card.component';
 
 type CategoryPreviewProps = {
   title: string;
@@ -19,7 +19,7 @@ const CategoryPreview = () => {
       {shopCategoryData.map((category) => {
         console.log(category)
         return (
-        <ShopCategory
+        <ShopCategoryCard
           key={category.id}
           imageUrl={category.imageUrl}
           categoryName={category.category}
