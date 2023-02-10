@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 
 export const useClickoutside = (domNode, handler) => {
   useEffect(() => {
-    console.log('Passed down as node arg', domNode.current.parentElement);
 
     const dropdownCloser = (event) => {
       if (

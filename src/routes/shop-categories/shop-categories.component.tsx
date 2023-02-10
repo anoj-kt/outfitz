@@ -18,7 +18,7 @@ const ShopCategories = () => {
       ) : (
         <ShopContainer>
           {shopCategoryData.map((category) => {
-            console.log(category);
+
             return (
               <ShopCategoryCard
                 key={category.id}
