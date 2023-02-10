@@ -8,8 +8,8 @@ type BackgroundImageProps = {
 };
 
 export const ShopCategoryCardContainer = styled.div<BackgroundImageProps>`
-  height: 500px;
-  width: 20rem;
+  height: 35em;
+  width: 100%;
   margin: 0 .25rem;
   background-image: ${({imageUrl}) => `url(${imageUrl})`};
   background-size: cover;
