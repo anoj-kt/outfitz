@@ -7,6 +7,7 @@ import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
 
 import { BUTTON_TYPE_CLASSES } from '../../components/button/button.component';
+import PaymentFormInfo from '../../components/payment-form-info/payment-form-info.component';
 
 import {
   PaymentFormContainer,
@@ -75,7 +76,8 @@ const PaymentForm = () => {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment: </h2>
+        <h2>Payment Information</h2>
+        <PaymentFormInfo />
         <CardElement />
         <PaymentButton
           isLoading={isProcessingPayment}
